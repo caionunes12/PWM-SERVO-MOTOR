@@ -1,0 +1,23 @@
+{
+    "version": 1,
+    "author": "Caio Nunes",
+    "editor": "wokwi",
+    "parts": [
+      {
+        "type": "board-pi-pico-w",
+        "id": "pico",
+        "top": -3.25,
+        "left": -159.65,
+        "attrs": { "cyw43": "1", "builder": "pico-sdk" }
+      },
+      { "type": "wokwi-servo", "id": "servo1", "top": -2, "left": -28.8, "attrs": {} }
+    ],
+    "connections": [
+      [ "pico:GP0", "$serialMonitor:RX", "", [] ],
+      [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+      [ "pico:GND.8", "servo1:GND", "black", [ "h38.71", "v19.2" ] ],
+      [ "pico:3V3", "servo1:V+", "red", [ "h29.11", "v9.6" ] ],
+      [ "pico:GP22", "servo1:PWM", "gray", [ "h38.71", "v-48" ] ]
+    ],
+    "dependencies": {}
+  }
