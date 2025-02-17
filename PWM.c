@@ -1,6 +1,8 @@
+#include <stdio.h>
 #include "pico/stdlib.h"
 #include "hardware/pwm.h"
-#include <stdio.h>
+#include "hardware/pio.h"
+
 
 int main() {
     const uint gpio_pin = 22; // Definição do pino GPIO 22
